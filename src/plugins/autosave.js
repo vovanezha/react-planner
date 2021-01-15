@@ -1,5 +1,7 @@
-const localStorage = window.hasOwnProperty('localStorage') ? window.localStorage : false;
 import { loadProject } from '../actions/project-actions';
+import { Converter } from '../class/export';
+
+const localStorage = window.hasOwnProperty('localStorage') ? window.localStorage : false;
 
 const TIMEOUT_DELAY = 500;
 
@@ -26,7 +28,8 @@ export default function autosave(autosaveKey, delay) {
       if (timeout) clearTimeout(timeout);
       timeout = setTimeout(() => {
         let state = stateExtractor(store.getState());
-        localStorage.setItem(autosaveKey, JSON.stringify(state.scene.toJS()));
+        const serializedState = Converter.serialize(state.scene.toJS());
+        localStorage.setItem(autosaveKey, JSON.stringify(serializedState));
         /*let scene = state.sceneHistory.last;
         if (scene) {
           let json = JSON.stringify(scene.toJS());

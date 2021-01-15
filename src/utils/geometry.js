@@ -335,3 +335,10 @@ export function rotatePointAroundPoint( px, py, ox, oy, theta ) {
   };
 
 }
+
+export function vertexBasedOnOtherVertexDistanceAndAngle(x1, y1, distance, angle) {
+  const x = x1 + Math.cos(angle * Math.PI / 180) * distance;
+  const y = y1 + Math.sin(angle * Math.PI / 180) * distance;
+
+  return { x, y }
+}

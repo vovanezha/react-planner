@@ -13,7 +13,8 @@ import {
   Hole,
   Item,
   HorizontalGuide,
-  VerticalGuide
+  VerticalGuide,
+  Converter
 } from '../class/export';
 
 class Project{
@@ -35,7 +36,7 @@ class Project{
   }
 
   static loadProject(state, sceneJSON) {
-    state = new State({ scene: sceneJSON, catalog: state.catalog.toJS() });
+    state = new State({ scene: Converter.parse(sceneJSON), catalog: state.catalog.toJS() });
 
     return { updatedState: state };
   }

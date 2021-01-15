@@ -15,7 +15,7 @@ export default class Scene extends Component {
 
     return (
       <g>
-        <Grids scene={scene}/>
+        {/* <Grids scene={scene}/> */}
 
         <g style={{pointerEvents: 'none'}}>
           {

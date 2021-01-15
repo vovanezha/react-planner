@@ -365,9 +365,12 @@ export default function Viewer2D(
 
         <svg width={scene.width} height={scene.height}>
           <defs>
-            <pattern id="diagonalFill" patternUnits="userSpaceOnUse" width="4" height="4" fill="#FFF">
-              <rect x="0" y="0" width="4" height="4" fill="#FFF" />
-              <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" style={{ stroke: '#8E9BA2', strokeWidth: 1 }} />
+            <pattern id="diagonalFill" patternUnits="userSpaceOnUse" width="2339" height="1653">
+              <image
+                href="https://storage.googleapis.com/download/storage/v1/b/archilyse-slam-images/o/plan_images%2F8b38859c-2979-46e1-ab99-7a2a299a190f.jpeg?generation=1582208409646913&alt=media"
+                x="0"
+                y="0"
+                />
             </pattern>
           </defs>
           <g style={Object.assign(mode2Cursor(mode), mode2PointerEvents(mode))}>

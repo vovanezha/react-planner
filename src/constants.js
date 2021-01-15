@@ -242,6 +242,7 @@ export const MODE_UPLOADING_IMAGE = 'MODE_UPLOADING_IMAGE';
 export const MODE_FITTING_IMAGE = 'MODE_FITTING_IMAGE';
 export const MODE_VIEWING_CATALOG = 'MODE_VIEWING_CATALOG';
 export const MODE_CONFIGURING_PROJECT = 'MODE_CONFIGURING_PROJECT';
+export const MODE_SETTING_SCALING = 'MODE_SETTING_SCALING';
 
 //Thinking about it...
 //https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Global_Objects/Proxy
